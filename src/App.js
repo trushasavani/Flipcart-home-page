@@ -1,4 +1,5 @@
 
+import {  BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Carousel from './component/Carousel';
 
@@ -10,25 +11,35 @@ import Secondcarousel from './component/Secondcarousel';
 import Section4 from './component/Section4';
 import Section5 from './component/Section5';
 import Section6 from './component/Section6';
+import ElectronicsPage from './Pages/ElectronicsPage';
+import FashionPage from './Pages/FashionPage';
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Homepage from './Pages/Homepage';
+
+
+
+
+
+
 
 
 
 function App() {
   return (
-    <div className="App" >
-     <Header />
-     <Navbarimage />
-     <Carousel />
-     <Secondcarousel />
-     <Section4 />
-     <Section5 />
-     <Section6 />
     
-      <Footer /> 
-     <Footernavbar />
-
+      <Router>
+        <Header />
+        <Switch>
+         <Route path='/' exact component={Homepage} /> 
+          <Route path="/electronics"   component={ElectronicsPage}  />
+          <Route path="/fashion" component={FashionPage} />
+       
+        </Switch>
+        <Footer /> 
+        <Footernavbar /> 
+      </Router>
     
-    </div>
+    
   );
 }
 

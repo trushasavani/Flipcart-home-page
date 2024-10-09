@@ -20,8 +20,8 @@ function Secondcarousel() {
         cssEase: "linear"
     };
     return (
-        <Box sx={{ height: '450px', }}>
-            <Grid container spacing={2} sx={{padding:'10px'}} >
+        <Box sx={{ height: '450px',backgroundColor:'#fff',mt:4 }}>
+            <Grid container spacing={5} sx={{padding:'10px'}} >
                 <Grid item xs={10}>
                     <Box sx={{ mt: 2, backgroundColor: ' #fff ', height: '400px', }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
